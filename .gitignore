@@ -7,6 +7,15 @@ gradle-app.setting
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
 
+# Ignore InteliJ metadata
+.idea
+*.iml
+
+# Ignore InteliJ build folder
+
+out/
+
+
 # Cache of project
 .gradletasknamecache
 
