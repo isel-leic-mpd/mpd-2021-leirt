@@ -18,6 +18,7 @@ public abstract class BinaryOper implements Expr {
 
 	@Override
 	public void write(Writer writer) {
+
 		try {
 			left.write(writer);
 			writer.write( getOperator());

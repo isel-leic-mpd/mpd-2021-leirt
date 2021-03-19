@@ -18,7 +18,7 @@ public class Mul extends  BinaryOper {
 
 	@Override
 	public double eval() {
-		return 0;
+		return left.eval()*right.eval();
 	}
 
 
