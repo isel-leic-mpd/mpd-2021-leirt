@@ -22,7 +22,6 @@ public class ExpTests {
 		assertEquals(8.0, add.eval(), 0.01);
 		StringWriter writer = new StringWriter();
 		add.write(writer);
-
 		System.out.println(writer.toString());
 
 	}
