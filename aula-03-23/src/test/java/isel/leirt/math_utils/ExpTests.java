@@ -82,7 +82,7 @@ public class ExpTests {
 
 	private static class VariableSubscriber implements Subscriber {
 		private final Var pubVar;
-		private double currValState;
+		private  double currValState;
 
 		public VariableSubscriber(Var pubVar) {
 			this.pubVar = pubVar;
