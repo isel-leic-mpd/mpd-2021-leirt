@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+abstract BinaryOper {
+     +write(w : Writer)
+     #getOper(): String
+}
+
+
+class Mean {
+    +  eval() : double
+    +  write(w : Writer)
+}
+
+interface Expr {
+    eval() : double
+    write(w : Writer)
+}
+
+class Add {
+  +  eval() : double
+  #getOper(): String
+}
+class Mul {
+  +  eval() : double
+  #getOper(): String
+}
+class Number {
+  +  eval() : double
+  +  write(w : Writer)
+}
+
+
+
+
+Expr <|.. Mean
+Expr <|.. BinaryOper
+Expr <|.. Number
+
+
+BinaryOper <|-- Add
+BinaryOper <|-- Mul
+
+Mean  "1" o-- "1..*" Expr : elems
+
+class Mean {
+    Expr[] elems
+}
+@enduml
