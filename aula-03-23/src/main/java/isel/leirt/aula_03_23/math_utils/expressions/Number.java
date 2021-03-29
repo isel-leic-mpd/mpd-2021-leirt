@@ -1,11 +1,11 @@
-package isel.leirt.math_utils.expressions;
+package isel.leirt.aula_03_23.math_utils.expressions;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.io.Writer;
 
 public class Number implements Expr {
-
+	public int x;
 	private final Double number;
 
 	public Number(double number) {

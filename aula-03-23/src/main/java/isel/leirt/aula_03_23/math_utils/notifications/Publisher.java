@@ -1,4 +1,4 @@
-package isel.leirt.math_utils.notifications;
+package isel.leirt.aula_03_23.math_utils.notifications;
 
 public interface Publisher {
 	void subscribe(Subscriber s);

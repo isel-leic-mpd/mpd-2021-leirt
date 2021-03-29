@@ -1,4 +1,4 @@
-package isel.leirt.exceptions;
+package isel.leirt.aula_03_23.exceptions;
 
 public class CircularDependencyException extends RuntimeException {
 	public CircularDependencyException() {

@@ -2,15 +2,21 @@
 'https://plantuml.com/class-diagram
 
 
-abstract BinaryOper {
+
+
+abstract UnaryOper {
      +write(w : Writer)
      #getOper(): String
 }
 
+abstract NaryOper {
+     +write(w : Writer)
+     #getOper(): String
+}
 
 class Mean {
     +  eval() : double
-    +  write(w : Writer)
+
 }
 
 class Var {
@@ -21,6 +27,10 @@ interface Expr {
     write(w : Writer)
 }
 
+abstract BinaryOper {
+     +write(w : Writer)
+     #getOper(): String
+}
 class Add {
   +  eval() : double
   #getOper(): String
@@ -29,26 +39,47 @@ class Mul {
   +  eval() : double
   #getOper(): String
 }
+
+class Sub {
+  +  eval() : double
+  #getOper(): String
+}
+class Div {
+  +  eval() : double
+  #getOper(): String
+}
+
 class Number {
   +  eval() : double
   +  write(w : Writer)
 }
 
+class Factorial {
+ +  eval() : double
+}
 
 
 
-Expr <|.. Mean
+Expr <|.. NaryOper
 Expr <|.. BinaryOper
+Expr <|.. UnaryOper
+Expr <|.. NaryOper
 Expr <|.. Number
 Expr <|.. Var
 
 BinaryOper <|-- Add
 BinaryOper <|-- Mul
+BinaryOper <|-- Sub
+BinaryOper <|-- Div
 
-Mean  "1" o-- "1..*" Expr : elems
+UnaryOper <|-- Factorial
+NaryOper <|-- Mean
+
+NaryOper  "1" o-- "1..*" Expr : elems
 Var "1" o-- "1" Expr : expr
 
 BinaryOper "1" o-- "1" Expr : left
 BinaryOper "1" o-- "1" Expr : right
+
 
 @enduml

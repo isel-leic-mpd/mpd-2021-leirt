@@ -1,12 +1,13 @@
-package isel.leirt.math_utils;
+package isel.leirt.math_utils.aula_03_23;
 
-import isel.leirt.exceptions.CircularDependencyException;
-import isel.leirt.math_utils.expressions.*;
+import isel.leirt.aula_03_23.exceptions.CircularDependencyException;
+import isel.leirt.aula_03_23.math_utils.expressions.*;
+import isel.leirt.aula_03_23.math_utils.expressions.Number;
+
 
 import static org.junit.Assert.*;
 
-import isel.leirt.math_utils.expressions.Number;
-import isel.leirt.math_utils.notifications.Subscriber;
+import isel.leirt.aula_03_23.math_utils.notifications.Subscriber;
 import org.junit.Test;
 
 import java.io.StringWriter;
@@ -119,16 +120,4 @@ public class ExpTests {
 
 	}
 
-	private void checkObject(Object o) {
-		Class<?> cls = o.getClass();
-
-		System.out.println(cls.getName());
-	}
-
-	@Test
-	public void first_reflection_test() {
-		Number n = new Number(2);
-		checkObject(n);
-
-	}
 }

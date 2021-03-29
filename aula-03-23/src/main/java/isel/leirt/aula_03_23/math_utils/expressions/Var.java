@@ -1,8 +1,8 @@
-package isel.leirt.math_utils.expressions;
+package isel.leirt.aula_03_23.math_utils.expressions;
 
-import isel.leirt.exceptions.CircularDependencyException;
-import isel.leirt.math_utils.notifications.Publisher;
-import isel.leirt.math_utils.notifications.Subscriber;
+import isel.leirt.aula_03_23.exceptions.CircularDependencyException;
+import isel.leirt.aula_03_23.math_utils.notifications.Publisher;
+import isel.leirt.aula_03_23.math_utils.notifications.Subscriber;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
