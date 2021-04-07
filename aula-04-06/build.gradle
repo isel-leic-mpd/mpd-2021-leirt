@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+version 'unspecified'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Use JUnit test framework.
+    implementation 'junit:junit:4.13'
+    implementation 'org.dom4j:dom4j:2.1.3'
+}

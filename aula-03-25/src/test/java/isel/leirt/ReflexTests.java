@@ -5,21 +5,19 @@ import isel.leirt.aula_03_23.math_utils.expressions.Expr;
 import isel.leirt.aula_03_23.math_utils.expressions.Number;
 import org.junit.Test;
 
+
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReflexTests {
-	private void checkObject(Object o) {
-		Class<?> cls = o.getClass();
 
-		System.out.println(cls.getName());
-	}
+
 
 	private static Field[] getAllfields(Object obj) {
 		List<Field> fields = new ArrayList<>();
 		Class<?> c = obj.getClass();
-		while(c != null) {
+		while(c != Object.class) {
 			Field[] flds = c.getDeclaredFields();
 			for(Field f : flds) {
 				fields.add(f);
@@ -40,6 +38,12 @@ public class ReflexTests {
 		System.out.println(cls.getName());
 	}
 
+	private void checkObject(Object o) {
+		Class<?> cls = o.getClass();
+
+		System.out.println(cls.getName());
+	}
+
 	@Test
 	public void first_reflection_test() {
 		Class<Number> cls = Number.class;
@@ -52,10 +56,10 @@ public class ReflexTests {
 	@Test
 	public void get_fields_reflection_test() {
 
-		Expr a = new Add( new Number(3), new Number(7));
+		Object a = new Add( new Number(3), new Number(7));
+		String s1 = "hello, World";
 
-
-		Field[] fields = getAllfields(a);
+		Field[] fields = getAllfields(s1);
 
 		for(Field f : fields) {
 			String s = String.format("%s:%s in %s", f.getName(), f.getType().getSimpleName(), f.getDeclaringClass().getSimpleName());
