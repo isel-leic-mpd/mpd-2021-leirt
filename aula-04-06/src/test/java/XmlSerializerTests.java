@@ -1,8 +1,12 @@
+import isel.leirt.aula_03_23.math_utils.expressions.Expr;
+import isel.leirt.aula_03_23.math_utils.expressions.Number;
 import isel.leirt.mpd.reflection_utils.XmlSerializer;
 import isel.leirt.mpd.reflection_utils.test_classes.B;
 import org.dom4j.Document;
 import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
 
 public class XmlSerializerTests {
 
@@ -22,13 +26,15 @@ public class XmlSerializerTests {
 		System.out.println(newB);
 
 
-		Assert.assertTrue(b instanceof B);
-		Assert.assertTrue(newB instanceof B);
+		assertTrue(b instanceof B);
+		assertTrue(newB instanceof B);
 		Assert.assertEquals(b.getClass(), newB.getClass());
 
 		Assert.assertEquals(B.class , b.getClass());
 
 		Assert.assertEquals(b, newB);
-		Assert.assertTrue(b.equals(newB));
+		assertTrue(b.equals(newB));
 	}
+
+
 }
