@@ -22,8 +22,9 @@ public class ReflexUtils {
 			System.out.println("Annotations for field " + f.getName());
 			for(Annotation a : fAnnotations) {
 				Class<? extends Annotation> annotationType = a.annotationType();
-				Attribute attr = (Attribute) a;
 				System.out.println(annotationType.getSimpleName());
+				Attribute attr = (Attribute) a;
+
 				System.out.println(attr.dbName());
 			}
 		}

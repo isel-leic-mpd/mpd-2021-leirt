@@ -1,4 +1,4 @@
-package isel.leirt.mpd.weather.dto;
+package isel.leirt.mpd.weather.utils;
 
 import java.time.*;
 

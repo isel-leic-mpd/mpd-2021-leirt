@@ -1,13 +1,11 @@
-import isel.leirt.mpd.weather.dto.*;
+import isel.leirt.mpd.weather.dto.ForecastWeatherInfo;
+import isel.leirt.mpd.weather.dto.WeatherInfo;
 import isel.leirt.mpd.weather.OpenWeatherWebApi;
+import isel.leirt.mpd.weather.queries.Queries0;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.time.LocalDate;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
 
 public class WeatherTests {
 
@@ -47,9 +45,28 @@ public class WeatherTests {
         List<WeatherInfo> cities = webApi.weatherAtArea(longi, lati,  longf, latf);
         Assert.assertTrue(cities.size() > 0);
 
+        System.out.println("found " + cities.size() + " cities.");
         for(WeatherInfo wi: cities)
             System.out.println(wi);
     }
 
+
+    @Test
+    public void getSunnyCities() {
+        double lati = 36.945, longi = -9.522;
+        double latf = 42.149, longf = -6.187;
+        OpenWeatherWebApi webApi = new OpenWeatherWebApi();
+        List<WeatherInfo> cities = webApi.weatherAtArea(longi, lati,  longf, latf);
+
+        Iterable<WeatherInfo> sunny_cities = Queries0.getSunnyCities(cities);
+
+        int total=0;
+        for(WeatherInfo wi : sunny_cities)
+            total++;
+
+        System.out.println("total sunny cities: " + total);
+        for(WeatherInfo wi : sunny_cities)
+            System.out.println(wi);
+    }
 
 }

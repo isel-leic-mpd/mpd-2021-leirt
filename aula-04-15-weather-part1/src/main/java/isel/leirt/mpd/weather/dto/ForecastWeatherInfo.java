@@ -1,10 +1,11 @@
 package isel.leirt.mpd.weather.dto;
 
+import isel.leirt.mpd.weather.utils.Utils;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-import static isel.leirt.mpd.weather.dto.Utils.*;
-import static isel.leirt.mpd.weather.dto.Utils.timeFromUnixTime;
+import static isel.leirt.mpd.weather.utils.Utils.timeFromUnixTime;
 
 public class ForecastWeatherInfo {
 	private long dt;

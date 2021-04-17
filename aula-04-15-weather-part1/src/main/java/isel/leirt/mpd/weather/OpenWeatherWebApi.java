@@ -1,11 +1,13 @@
 package isel.leirt.mpd.weather;
 
 import com.google.gson.Gson;
-import isel.leirt.mpd.weather.dto.*;
+import isel.leirt.mpd.weather.dto.WeatherInfo;
+import isel.leirt.mpd.weather.dto.AreaWeatherQuery;
+import isel.leirt.mpd.weather.dto.ForecastWeatherInfo;
+import isel.leirt.mpd.weather.dto.ForecastWeatherInfoQuery;
 
 import java.io.*;
 import java.net.URL;
-import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
@@ -123,6 +125,7 @@ public class OpenWeatherWebApi {
 
 
     public OpenWeatherWebApi() {
+
         gson = new Gson();
     }
 }
