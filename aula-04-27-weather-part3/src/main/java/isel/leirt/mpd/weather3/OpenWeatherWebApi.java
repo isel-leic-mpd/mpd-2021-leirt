@@ -1,8 +1,7 @@
-package isel.leirt.mpd.weather2;
+package isel.leirt.mpd.weather3;
 
 import com.google.gson.Gson;
-import isel.leirt.mpd.weather2.dto.*;
-
+import isel.leirt.mpd.weather3.dto.*;
 
 import java.io.*;
 import java.net.URL;
@@ -10,7 +9,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
-import static isel.leirt.mpd.weather2.utils.Utils.toUnixTime;
+import static isel.leirt.mpd.weather3.utils.Utils.toUnixTime;
 
 public class OpenWeatherWebApi {
     private static final String API_KEY;

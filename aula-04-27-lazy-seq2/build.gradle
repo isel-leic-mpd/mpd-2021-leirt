@@ -1,0 +1,14 @@
+plugins {
+    id 'java-library'
+}
+
+sourceCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Use JUnit test framework.
+    implementation 'junit:junit:4.13'
+}
