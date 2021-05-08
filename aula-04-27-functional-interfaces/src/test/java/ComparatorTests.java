@@ -11,7 +11,7 @@ import static java.util.Comparator.*;
 import java.util.List;
 
 public class ComparatorTests {
-	
+
 	static List<Person> db = List.of(
 		new Person("Carlos",
 			        LocalDate.of(1980, 3, 2),

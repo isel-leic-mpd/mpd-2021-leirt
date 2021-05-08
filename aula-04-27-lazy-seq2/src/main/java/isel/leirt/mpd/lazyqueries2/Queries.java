@@ -1,9 +1,6 @@
 package isel.leirt.mpd.lazyqueries2;
 
-import isel.leirt.mpd.lazyqueries2.iterators.FilterIterator;
-import isel.leirt.mpd.lazyqueries2.iterators.MapIterator;
-import isel.leirt.mpd.lazyqueries2.iterators.PrimesIterator;
-import isel.leirt.mpd.lazyqueries2.iterators.TakeWhileIterator;
+import isel.leirt.mpd.lazyqueries2.iterators.*;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -21,6 +18,15 @@ public class Queries {
 		};
 	}
 
+	public static Iterable<Integer> range(int li, int ls) {
+		List<Integer> rangeList = new ArrayList<>();
+
+		for (int i= li; i <= ls; ++i) {
+			rangeList.add(i);
+		}
+		return rangeList;
+	}
+
 	// intermediate operations
 	public static <T> Iterable<T> filter(Iterable<T> src, Predicate<T> pred ) {
 		return () -> new FilterIterator<>(src, pred);
@@ -31,7 +37,7 @@ public class Queries {
 	}
 
 
-	public static <T> Iterable<Double> mapToDoubles(
+ 	public static <T> Iterable<Double> mapToDoubles(
 		Iterable<T> seq, ToDoubleFunction<T> mapper) {
 
 		List<Double> temps = new ArrayList<>();
@@ -47,6 +53,13 @@ public class Queries {
 
 		return () -> new MapIterator<>(seq, mapper);
 	}
+
+	public static <T,U> Iterable<U> flatMap(
+		Iterable<T> seq, Function<T, Iterable<U>> mapper) {
+
+		return () -> new FlatMapIterator<>(seq, mapper);
+	}
+
 
 	// terminal operations
 
