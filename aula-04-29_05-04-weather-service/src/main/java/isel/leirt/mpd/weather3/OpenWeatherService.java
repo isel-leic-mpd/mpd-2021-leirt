@@ -23,16 +23,14 @@ public class OpenWeatherService {
 	public Iterable<Location> search(String query) {
 		return
 			map (
-				() -> {
-					return api.search(query).iterator();
-				},
+				() -> api.search(query).iterator(),
 				dto -> dtoToLocation(dto)
 		);
 	}
 
 	public Iterable<DayInfo> forecastAt(Location loc) {
 		return map(
-			api.forecastWeatherAt(loc.getLatitude(),loc.getLongitude()),
+			() -> api.forecastWeatherAt(loc.getLatitude(),loc.getLongitude()).iterator(),
 			dto -> dtoToDayInfo(dto, loc)
 		);
 	}
@@ -43,7 +41,7 @@ public class OpenWeatherService {
 
 		return map(
 			filter(
-				api.forecastDetailAt(lat,lon),
+				() -> api.forecastDetailAt(lat,lon).iterator(),
 				f -> day.equals(f.observationDate())
 			),
 			dto -> dtoToWeatherInfo(dto)

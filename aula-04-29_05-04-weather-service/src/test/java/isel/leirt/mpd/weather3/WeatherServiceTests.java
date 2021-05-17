@@ -93,7 +93,8 @@ public class WeatherServiceTests {
 
 		Function<String, Reader> freq = counter.andThen(http);
 
-		Request counterReq = p -> freq.apply(p);
+		//Request counterReq = p -> freq.apply(p);
+		Request counterReq = freq::apply;
 
 		OpenWeatherService weather =
 			new OpenWeatherService(new OpenWeatherWebApi(counterReq));
@@ -110,10 +111,11 @@ public class WeatherServiceTests {
 
 		Iterable<DayInfo> forecast = loc.forecast();
 
-
 		System.out.println("Final counterReq= " + count[0]);
 
 		forecast.forEach(System.out::println);
+
+		System.out.println("Final counterReq= " + count[0]);
 
 	}
 }
