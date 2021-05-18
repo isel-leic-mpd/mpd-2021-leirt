@@ -1,4 +1,4 @@
-package isel.leirt.mpd.weather5.requests;
+package isel.leirt.mpd.moviesdb1.requests;
 
 import java.io.*;
 import java.net.URL;
