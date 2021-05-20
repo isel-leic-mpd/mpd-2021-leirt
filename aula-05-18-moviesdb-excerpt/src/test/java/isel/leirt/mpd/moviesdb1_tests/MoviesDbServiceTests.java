@@ -24,7 +24,9 @@ public class MoviesDbServiceTests {
 		MoviesDbService moviesServ = new MoviesDbService(new MoviesDbWebApi(counterReq));
 
 		Iterable<TvSeries> series =
-			cache(moviesServ.searchTvSeries("War", 100));
+			cache(
+				moviesServ.searchTvSeries("War", 100)
+			);
 
 		System.out.println(counterReq.getCount());
 		assertEquals(100, count(series));
@@ -34,6 +36,10 @@ public class MoviesDbServiceTests {
 		series.forEach(System.out::println);
 		System.out.println(counterReq.getCount());
 	}
+
+
+
+
 
 	/*
 	@Test

@@ -4,6 +4,9 @@ import isel.leirt.mpd.moviesdb1.queries.iterators.*;
 
 import java.util.*;
 import java.util.function.*;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
+import static java.util.stream.StreamSupport.*;
 
 public class Queries {
 	// factories or sequence constructors
@@ -34,12 +37,33 @@ public class Queries {
 		return () -> new FilterIterator<>(src, pred);
 	}
 
-	public static <T> Iterable<T> takeWhile(Iterable<T> src, Predicate<T> pred ) {
-		throw new UnsupportedOperationException();
+	public static <T,R> Iterable<R> flatMap(Iterable<T> src,
+	                                        Function<T,Iterable<R>> mapper) {
+
+
+		Stream<T> s = stream(src.spliterator(), false);
+		return () -> s.flatMap(m ->  stream(mapper.apply(m).spliterator(), false)).iterator();
+	}
+
+
+	public static <T> Iterable<T> takeWhile(Iterable<T> src,Predicate<T> p) {
+		Stream<T> s = stream(src.spliterator(), false);
+		return () -> s.takeWhile(p).iterator();
+
+	}
+
+	public static <T> Iterable<T> limit(Iterable<T> src, int n) {
+		Stream<T> s = stream(src.spliterator(), false);
+		return () -> s.limit(n).iterator();
+
 	}
 
 	public static Iterable<Integer> range(int li, int ls) {
-		throw new UnsupportedOperationException();
+		List<Integer> nums = new ArrayList<>();
+		for(int i=li; i <= ls; ++i) {
+			nums.add(i);
+		}
+		return nums;
 	}
 
 	public static <T,U> Iterable<U> map(
@@ -48,11 +72,6 @@ public class Queries {
 		return () -> new MapIterator<>(seq, mapper);
 	}
 
-	public static <T,U> Iterable<U> flatMap(
-		Iterable<T> seq, Function<T, Iterable<U>> mapper) {
-
-		throw new UnsupportedOperationException();
-	}
 
 	public static <T> Iterable<T> skipWhile(Iterable<T> src, Predicate<T> pred ) {
 		return () ->  {
@@ -96,9 +115,7 @@ public class Queries {
 		};
 	}
 
-	public static <T> Iterable<T> limit(Iterable<T> src, int n) {
-		throw new UnsupportedOperationException();
-	}
+
 
 	// terminal operations
 
