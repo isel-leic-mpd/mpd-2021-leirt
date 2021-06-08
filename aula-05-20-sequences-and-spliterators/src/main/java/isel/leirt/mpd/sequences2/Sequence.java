@@ -1,12 +1,12 @@
-package isel.leirt.mpd.sequences;
+package isel.leirt.mpd.sequences2;
 
 import java.util.Iterator;
-import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 
+@SuppressWarnings("unchecked")
 public interface Sequence<T> {
 	boolean tryAdvance(Consumer<T> action);
 
@@ -70,6 +70,7 @@ public interface Sequence<T> {
 	}
 
 	default Sequence<T> collapse() {
+
 		throw new UnsupportedOperationException();
 	}
 
@@ -78,7 +79,8 @@ public interface Sequence<T> {
 	}
 
 	default Sequence<T> concat(Sequence<T> other) {
-		 return action -> tryAdvance(action) || other.tryAdvance(action);
+
+		return action -> tryAdvance(action) || other.tryAdvance(action);
 	}
 
 	default <U> Sequence<U> map(Function<T, U> mapper) {

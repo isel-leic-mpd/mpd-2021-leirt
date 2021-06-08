@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 import static java.util.stream.StreamSupport.*;
 
+@SuppressWarnings("unchecked")
 public class Queries {
 	// factories or sequence constructors
 
@@ -23,6 +24,7 @@ public class Queries {
 	}
 
 	public static  <T> Iterable<T> generate( Supplier<T> supplier) {
+
 		throw new UnsupportedOperationException();
 	}
 
@@ -39,8 +41,6 @@ public class Queries {
 
 	public static <T,R> Iterable<R> flatMap(Iterable<T> src,
 	                                        Function<T,Iterable<R>> mapper) {
-
-
 		Stream<T> s = stream(src.spliterator(), false);
 		return () -> s.flatMap(m ->  stream(mapper.apply(m).spliterator(), false)).iterator();
 	}
@@ -128,6 +128,7 @@ public class Queries {
 	}
 
 	public static <T> List<T>  toList(Iterable<T> src) {
+
 		throw new UnsupportedOperationException();
 	}
 

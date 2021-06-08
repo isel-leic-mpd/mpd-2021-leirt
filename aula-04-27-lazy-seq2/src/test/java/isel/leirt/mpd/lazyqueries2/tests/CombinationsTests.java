@@ -7,6 +7,7 @@ import java.util.List;
 
 import static isel.leirt.mpd.lazyqueries2.Queries.*;
 
+@SuppressWarnings("unchecked")
 public class CombinationsTests {
 
 	private static class Pair<T,U> {
@@ -30,7 +31,7 @@ public class CombinationsTests {
 
 		for(int i=1; i <= 10; i++) {
 			for(int j = i+1 ; j <= 10; j++) {
-				combs.add(new Pair(i, j));
+				combs.add(new Pair<>(i, j));
 			}
 		}
 
@@ -47,7 +48,7 @@ public class CombinationsTests {
 					i ->
 						map (
 							range(i+1, 10),
-							j -> new Pair(i,j)
+							j -> new Pair<>(i,j)
 						)
 			);
 

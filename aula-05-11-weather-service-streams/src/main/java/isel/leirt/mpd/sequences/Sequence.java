@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+@SuppressWarnings("unchecked")
 public interface Sequence<T> {
 	boolean tryAdvance(Consumer<T> action);
 
