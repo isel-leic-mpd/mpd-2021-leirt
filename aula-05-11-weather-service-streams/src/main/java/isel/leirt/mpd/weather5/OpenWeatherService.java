@@ -28,6 +28,20 @@ public class OpenWeatherService {
 					.map(dto -> dtoToLocation(dto));
 	}
 
+	/*
+	 * new search version for a lazy operation
+	 * that calls the api just when the returned stream is consumed
+	 */
+	public Stream<Location> search2(String query) {
+		return Stream.of(1)
+				.flatMap(x -> {
+					return api.search(query)
+						.stream()
+						.map(dto -> dtoToLocation(dto));
+				});
+
+	}
+
 	public Supplier<Stream<DayInfo>> forecastAt(Location loc) {
 		return
 			() -> api.forecastWeatherAt(loc.getLatitude(),loc.getLongitude())

@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+
+sourceCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':aula-06-08-weather-service-async')
+    compile group: 'org.slf4j', name: 'slf4j-jdk14', version: '1.7.25'
+    implementation 'io.vertx:vertx-web:3.9.1'
+    testImplementation 'junit:junit:4.12'
+}

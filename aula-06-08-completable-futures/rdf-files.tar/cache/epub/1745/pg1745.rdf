@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xml:base="http://www.gutenberg.org/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:cc="http://web.resource.org/cc/"
+  xmlns:marcrel="http://id.loc.gov/vocabulary/relators/"
+  xmlns:pgterms="http://www.gutenberg.org/2009/pgterms/"
+  xmlns:dcam="http://purl.org/dc/dcam/"
+>
+  <pgterms:ebook rdf:about="ebooks/1745">
+    <dcterms:hasFormat>
+      <pgterms:file rdf:about="http://www.gutenberg.org/files/1745/1745.zip">
+        <dcterms:format>
+          <rdf:Description rdf:nodeID="Nf173a80dfe6d4015beba2c585fc5c29c">
+            <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+            <rdf:value rdf:datatype="http://purl.org/dc/terms/IMT">text/plain; charset=us-ascii</rdf:value>
+          </rdf:Description>
+        </dcterms:format>
+        <dcterms:format>
+          <rdf:Description rdf:nodeID="N832f29010d0d43dea8cf45662e5322b4">
+            <rdf:value rdf:datatype="http://purl.org/dc/terms/IMT">application/zip</rdf:value>
+            <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+          </rdf:Description>
+        </dcterms:format>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-09-07T14:23:56</dcterms:modified>
+        <dcterms:extent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">375262</dcterms:extent>
+        <dcterms:isFormatOf rdf:resource="ebooks/1745"/>
+      </pgterms:file>
+    </dcterms:hasFormat>
+    <dcterms:hasFormat>
+      <pgterms:file rdf:about="http://www.gutenberg.org/files/1745/1745.txt">
+        <dcterms:isFormatOf rdf:resource="ebooks/1745"/>
+        <dcterms:format>
+          <rdf:Description rdf:nodeID="Nd7a0877f86ed4ec998583d06abb0e802">
+            <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+            <rdf:value rdf:datatype="http://purl.org/dc/terms/IMT">text/plain; charset=us-ascii</rdf:value>
+          </rdf:Description>
+        </dcterms:format>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-09-07T14:21:58</dcterms:modified>
+        <dcterms:extent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">950964</dcterms:extent>
+      </pgterms:file>
+    </dcterms:hasFormat>
+    <dcterms:language>
+      <rdf:Description rdf:nodeID="Ne421de89550b4508b163208a01c4a551">
+        <rdf:value rdf:datatype="http://purl.org/dc/terms/RFC4646">en</rdf:value>
+      </rdf:Description>
+    </dcterms:language>
+    <dcterms:rights>Public domain in the USA.</dcterms:rights>
+    <pgterms:bookshelf>
+      <rdf:Description rdf:nodeID="N88db5ca4341f4da5aa28b296bf803146">
+        <rdf:value>Harvard Classics</rdf:value>
+        <dcam:memberOf rdf:resource="2009/pgterms/Bookshelf"/>
+      </rdf:Description>
+    </pgterms:bookshelf>
+    <pgterms:downloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">262</pgterms:downloads>
+    <dcterms:tableOfContents>PREFACE by the Rev. H. C. Beeching, M. A.&#13;
+THE STATIONER TO THE READER.&#13;
+MISCELLANEOUS POEMS.&#13;
+ON THE MORNING OF CHRISTS NATIVITY. / Compos'd 1629.&#13;
+The Hymn.&#13;
+THE PASSION.&#13;
+On Time.&#13;
+UPON THE CIRCUMCISION.&#13;
+AT A SOLEMN MUSICK.&#13;
+AN EPITAPH ON THE MARCHIONESS OF WINCHESTER.&#13;
+SONG ON MAY MORNING.&#13;
+ON SHAKESPEAR.  1630.&#13;
+ANOTHER ON THE SAME.&#13;
+L'ALLEGRO.&#13;
+IL PENSEROSO.&#13;
+SONNETS.&#13;
+ARCADES.&#13;
+LYCIDAS.&#13;
+A MASK PRESENTED At LUDLOW-Castle, 1634. &amp;c.&#13;
+POEMS ADDED IN THE 1673 EDITION.&#13;
+SONNETS.&#13;
+On the new forcers of Conscience under the Long PARLIAMENT.&#13;
+ON THE LORD GEN. FAIRFAX AT THE SEIGE OF COLCHESTER.&#13;
+TO SR HENRY VANE THE YOUNGER.&#13;
+TO MR. CYRIACK SKINNER UPON HIS BLINDNESS.&#13;
+COLLECTION OF PASSAGES TRANSLATED IN THE PROSE WRITINGS.&#13;
+[From Of Reformation in England, 1641.]&#13;
+[From Reason of Church Government,  1641.]&#13;
+[From Apology for Smectymnuus, 1642.]&#13;
+[From Areopagitica, 1644.]&#13;
+[From Tetrachordon, 1645.]&#13;
+[From The Tenure of Kings and Magistrates, 1649.]&#13;
+[From History of Britain, 1670.]&#13;
+PARADISE LOST.&#13;
+PARADISE REGAIN'D.&#13;
+SAMSON AGONISTES&#13;
+The ARGUMENT.&#13;
+APPENDIX.&#13;
+ON TIME</dcterms:tableOfContents>
+    <dcterms:subject>
+      <rdf:Description rdf:nodeID="Na3206cc9e4944fc48194df862073f355">
+        <rdf:value>PR</rdf:value>
+        <dcam:memberOf rdf:resource="http://purl.org/dc/terms/LCC"/>
+      </rdf:Description>
+    </dcterms:subject>
+    <marcrel:edt>
+      <pgterms:agent rdf:about="2009/agents/24881">
+        <pgterms:alias>Beeching, Henry Charles</pgterms:alias>
+        <pgterms:deathdate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1919</pgterms:deathdate>
+        <pgterms:name>Beeching, H. C. (Henry Charles)</pgterms:name>
+        <pgterms:birthdate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1859</pgterms:birthdate>
+      </pgterms:agent>
+    </marcrel:edt>
+    <dcterms:publisher>Project Gutenberg</dcterms:publisher>
+    <dcterms:hasFormat>
+      <pgterms:file rdf:about="http://www.gutenberg.org/ebooks/1745.epub.images">
+        <dcterms:extent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4909700</dcterms:extent>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-01T03:38:23.604971</dcterms:modified>
+        <dcterms:isFormatOf rdf:resource="ebooks/1745"/>
+        <dcterms:format>
+          <rdf:Description rdf:nodeID="Ne9edd4852011497b93f11a2673783a9f">
+            <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+            <rdf:value rdf:datatype="http://purl.org/dc/terms/IMT">application/epub+zip</rdf:value>
+          </rdf:Description>
+        </dcterms:format>
+      </pgterms:file>
+    </dcterms:hasFormat>
+    <dcterms:hasFormat>
+      <pgterms:file rdf:about="http://www.gutenberg.org/files/1745/1745-h/1745-h.htm">
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-09-07T14:22:00</dcterms:modified>
+        <dcterms:extent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">999425</dcterms:extent>
+        <dcterms:format>
+          <rdf:Description rdf:nodeID="N54bf1058b98440abb87844711f8ca1ba">
+            <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+            <rdf:value rdf:datatype="http://purl.org/dc/terms/IMT">text/html; charset=us-ascii</rdf:value>
+          </rdf:Description>
+        </dcterms:format>
+        <dcterms:isFormatOf rdf:resource="ebooks/1745"/>
+      </pgterms:file>
+    </dcterms:hasFormat>
+    <dcterms:type>
+      <rdf:Description rdf:nodeID="Nb90cd403eb184939b2c67d6327ce3932">
+        <rdf:value>Text</rdf:value>
+        <dcam:memberOf rdf:resource="http://purl.org/dc/terms/DCMIType"/>
+      </rdf:Description>
+    </dcterms:type>
+    <dcterms:creator>
+      <pgterms:agent rdf:about="2009/agents/17">
+        <pgterms:birthdate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1608</pgterms:birthdate>
+        <pgterms:webpage rdf:resource="http://en.wikipedia.org/wiki/John_Milton"/>
+        <pgterms:deathdate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1674</pgterms:deathdate>
+        <pgterms:name>Milton, John</pgterms:name>
+      </pgterms:agent>
+    </dcterms:creator>
+    <dcterms:hasFormat>
+      <pgterms:file rdf:about="http://www.gutenberg.org/ebooks/1745.kindle.noimages">
+        <dcterms:isFormatOf rdf:resource="ebooks/1745"/>
+        <dcterms:format>
+          <rdf:Description rdf:nodeID="N51f1ffcc8a2c416fb2703b69dd578705">
+            <rdf:value rdf:datatype="http://purl.org/dc/terms/IMT">application/x-mobipocket-ebook</rdf:value>
+            <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+          </rdf:Description>
+        </dcterms:format>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-01T03:38:34.632807</dcterms:modified>
+        <dcterms:extent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1714197</dcterms:extent>
+      </pgterms:file>
+    </dcterms:hasFormat>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-05-01</dcterms:issued>
+    <dcterms:subject>
+      <rdf:Description rdf:nodeID="N6b65c41a038247129a15ec4d2f560e8b">
+        <rdf:value>English poetry</rdf:value>
+        <dcam:memberOf rdf:resource="http://purl.org/dc/terms/LCSH"/>
+      </rdf:Description>
+    </dcterms:subject>
+    <dcterms:hasFormat>
+      <pgterms:file rdf:about="http://www.gutenberg.org/ebooks/1745.txt.utf-8">
+        <dcterms:format>
+          <rdf:Description rdf:nodeID="Nf6b776786e8d46e39456f411e8e4fdef">
+            <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+            <rdf:value rdf:datatype="http://purl.org/dc/terms/IMT">text/plain</rdf:value>
+          </rdf:Description>
+        </dcterms:format>
+        <dcterms:isFormatOf rdf:resource="ebooks/1745"/>
+        <dcterms:extent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">950936</dcterms:extent>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-01T03:38:22.373023</dcterms:modified>
+      </pgterms:file>
+    </dcterms:hasFormat>
+    <dcterms:hasFormat>
+      <pgterms:file rdf:about="http://www.gutenberg.org/files/1745/1745-h.zip">
+        <dcterms:format>
+          <rdf:Description rdf:nodeID="N85297c2a84d6492ba8342c39b5b7d2af">
+            <rdf:value rdf:datatype="http://purl.org/dc/terms/IMT">text/html; charset=us-ascii</rdf:value>
+            <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+          </rdf:Description>
+        </dcterms:format>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-09-07T14:24:00</dcterms:modified>
+        <dcterms:isFormatOf rdf:resource="ebooks/1745"/>
+        <dcterms:extent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66981336</dcterms:extent>
+        <dcterms:format>
+          <rdf:Description rdf:nodeID="Nb59b48cc8e0d4a6baf8aa54ed4ff9d87">
+            <rdf:value rdf:datatype="http://purl.org/dc/terms/IMT">application/zip</rdf:value>
+            <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+          </rdf:Description>
+        </dcterms:format>
+      </pgterms:file>
+    </dcterms:hasFormat>
+    <dcterms:license rdf:resource="license"/>
+    <dcterms:title>The Poetical Works of John Milton</dcterms:title>
+    <dcterms:hasFormat>
+      <pgterms:file rdf:about="http://www.gutenberg.org/ebooks/1745.rdf">
+        <dcterms:isFormatOf rdf:resource="ebooks/1745"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-02T05:01:53.537199</dcterms:modified>
+        <dcterms:format>
+          <rdf:Description rdf:nodeID="N0ffb0bffab874af780539e242fc45b63">
+            <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+            <rdf:value rdf:datatype="http://purl.org/dc/terms/IMT">application/rdf+xml</rdf:value>
+          </rdf:Description>
+        </dcterms:format>
+        <dcterms:extent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13249</dcterms:extent>
+      </pgterms:file>
+    </dcterms:hasFormat>
+    <dcterms:hasFormat>
+      <pgterms:file rdf:about="http://www.gutenberg.org/ebooks/1745.kindle.images">
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-01T03:38:30.408864</dcterms:modified>
+        <dcterms:format>
+          <rdf:Description rdf:nodeID="Nf17d5d70867946a280585c0438c7585d">
+            <rdf:value rdf:datatype="http://purl.org/dc/terms/IMT">application/x-mobipocket-ebook</rdf:value>
+            <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+          </rdf:Description>
+        </dcterms:format>
+        <dcterms:extent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10649980</dcterms:extent>
+        <dcterms:isFormatOf rdf:resource="ebooks/1745"/>
+      </pgterms:file>
+    </dcterms:hasFormat>
+    <dcterms:hasFormat>
+      <pgterms:file rdf:about="http://www.gutenberg.org/ebooks/1745.epub.noimages">
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-01T03:38:24.156965</dcterms:modified>
+        <dcterms:format>
+          <rdf:Description rdf:nodeID="N079a456603124d20a7f2a3fc231d39ee">
+            <rdf:value rdf:datatype="http://purl.org/dc/terms/IMT">application/epub+zip</rdf:value>
+            <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+          </rdf:Description>
+        </dcterms:format>
+        <dcterms:extent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">437877</dcterms:extent>
+        <dcterms:isFormatOf rdf:resource="ebooks/1745"/>
+      </pgterms:file>
+    </dcterms:hasFormat>
+  </pgterms:ebook>
+  <cc:Work rdf:about="">
+    <rdfs:comment>Archives containing the RDF files for *all* our books can be downloaded at
+            http://www.gutenberg.org/wiki/Gutenberg:Feeds#The_Complete_Project_Gutenberg_Catalog</rdfs:comment>
+    <cc:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+  </cc:Work>
+  <rdf:Description rdf:about="http://en.wikipedia.org/wiki/John_Milton">
+    <dcterms:description>Wikipedia</dcterms:description>
+  </rdf:Description>
+</rdf:RDF>

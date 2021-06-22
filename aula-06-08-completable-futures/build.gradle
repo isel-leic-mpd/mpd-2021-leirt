@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+}
+
+sourceCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Use JUnit test framework.
+    implementation 'junit:junit:4.13'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation project(':aula-06-01-optionals-and-async-programming')
+    implementation project(':aula-05-25-more-spliterators')
+}

@@ -46,15 +46,15 @@ public class WeatherServiceTests {
 
 	}
 
-	/*
+
 	@Test
 	public void getForecastForLisbonTest() {
 		OpenWeatherService weather = new OpenWeatherService(new OpenWeatherWebApi());
 
 
 
-		MIterable<DayInfo> forecastWeather =
-			weather.search("Lisbon")
+		Stream<DayInfo> forecastWeather =
+			weather.search("Lisbon").get()
 			.filter(l -> l.getCountry().equals("PT"))
 			.flatMap(	l ->  l.forecast());
 
@@ -63,6 +63,7 @@ public class WeatherServiceTests {
 
 	}
 
+	/*
 	@Test
 	public void checkTheLocationCreationDoesntInvokeTheDataSourceTest() {
 

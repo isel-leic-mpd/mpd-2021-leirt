@@ -13,8 +13,10 @@ public class FutureExamples {
 		var future = pool.submit(() -> {
 			long tid = Thread.currentThread().getId();
 			System.out.println("Hello from thread " + tid);
+			/*
 			if (true)
 				throw new RuntimeException("Just for illustration purposes");
+			 */
 			return tid;
 		});
 

@@ -1,11 +1,13 @@
 package isel.leirt.mpd.asyncprog.usecases;
 
 import isel.leirt.mpd.asyncprog.services.TranslateService;
+import isel.leirt.mpd.asyncprog.services.async.TranslateServiceCF;
 import isel.leirt.mpd.asyncprog.services.async.TranslateServiceFut;
 import isel.leirt.mpd.asyncprog.services.async.TranslationServiceCb;
 import isel.leirt.mpd.asyncprog.utils.Pair;
 
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -115,4 +117,14 @@ public class TranslationOperations {
 		});
 	}
 
+	public static CompletableFuture<Pair<Optional<String>, Optional<String>>>
+		twoLanguagesAsyncWithCompletableFutures (
+		TranslateServiceCF serv, String srcLang, String dstLang1, String dstLang2, String text) {
+
+		var cf1 = serv.translateAsync(srcLang, dstLang1, text);
+		var cf2 = serv.translateAsync(srcLang, dstLang2, text);
+
+		return cf1.thenCombine(cf2, (os1, os2) -> new Pair<>(os1, os2));
+
+	}
 }
